@@ -1,0 +1,7 @@
+*.log
+*.bak
+*.mdf
+*.ldf
+*.csv
+.env
+__pycache__/
