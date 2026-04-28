@@ -30,7 +30,7 @@ The database consists of the following core entities:
 
 The design follows Third Normal Form (3NF) to ensure minimal redundancy and strong data integrity.
 
-📌 See `docs/database_diagram.png` for the full schema.
+📌 See `Docs/database_diagram.png` for the full schema.
 
 ## ⚙️ How to Run the Project
 
@@ -38,16 +38,24 @@ The design follows Third Normal Form (3NF) to ensure minimal redundancy and stro
 2. Create a new database (e.g. `OnlineBankDB`)
 3. Run the SQL scripts in the following order:
 
-   - `schema/create_tables.sql`
-   - `schema/constraints.sql`
-   - `data/sample_data.sql`
-   - `procedures/stored_procedures.sql`
-   - `views/views.sql`
-   - `triggers/triggers.sql`
+   - `Tables/dbo.Accounts.Table.sql`
+   - `Tables/dbo.Customers.Table.sql`
+   - `Tables/dbo.OverdueFees.Table.sql`
+   - `Tables/dbo.Repayments.Table.sql`
+   - `Tables/dbo.Transactions.Table.sql`
+   - `User_Defined_Functions/dbo.fn_GetCustomerOverdueRepaymentPercentage.UserDefinedFunction.sql`
+   - `Stored_Procedures/dbo.sp_GetPaymentsDueInLessThan5Days.StoredProcedure.sql`
+   - `Stored_Procedures/dbo.sp_InsertCustomer.StoredProcedure.sql`
+   - `Stored_Procedures/dbo.sp_SearchAccountsByName.StoredProcedure.sql`
+   - `Stored_Procedures/dbo.sp_UpdateCustomer.StoredProcedure.sql`
+   - `Views/dbo.vw_AllTransactionsWithOverdueFees.View.sql`
+  
+  or
+  - `script.sql`
 
 ## 📊 Example Queries
 
-Sample queries are included in `queries/example_queries.sql`, including:
+Sample queries are included in `example_queries.sql`, including:
 
 - Retrieve customer account details
 - Identify overdue payments
